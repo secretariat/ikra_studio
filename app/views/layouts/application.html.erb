@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Фото студия IKRA | <%= @title %> </title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "style.css" %>
+  <%= stylesheet_link_tag    "jScrollPane.css" %>
+  <%= stylesheet_link_tag    "jquery.lightbox-0.5.css" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery-1.7.2.min.js" %>
+  <%= javascript_include_tag "jquery.lightbox-0.5.pack.js" %>
+  <%= javascript_include_tag "jquery.js" %>
+  <%= javascript_include_tag "jquery.em.js" %>
+  <%= javascript_include_tag "jquery.mousewheel.js" %>
+  <%= javascript_include_tag "jScrollPane.js" %>
+  <script type="text/javascript">
+	$(function()
+	{
+		+ $('#pane4').jScrollPane();	
+	});
+  </script>
+  <%= csrf_meta_tags %>
+  <%
+	MarkItUp.buttons = MarkItUp.default_buttons
+	MarkItUp.replace_button(14, { :name => 'Image', :icon => "image", :key => 'P', :replaceWith => '<img src="/path" alt="" />' })
+	MarkItUp.insert_button(17, { :separator => '---------------' })
+	MarkItUp.delete_button(3)
+	MarkItUp.delete_button("Bold")
+  %>
+  <%= mark_it_up '#miu_test' %>
+</head>
+<div class="main">
+    <div class="lang-bar">
+    	<div class="lang-content">
+			<a href="/pages/changelang_ru"><img src="/images/ru_.gif" alt="ru" border="0"></img></a>
+			<a href="/pages/changelang_en"><img src="/images/en_.gif" alt="en" border="0"></img></a>
+    	</div>
+    </div>
+    <div class="header"><a href="http://ikra-studio.com.ua/pages/index?link=main"><img src="/images/logo.jpg" alt="IKRA" border="0"></img></a></div>
+    <div class="left col1">
+		<%= yield %>
+    </div>
+    <div class="col2"><img src="/images/me2.jpg" alt="Фото студия IKRA" border="0"></img></div>
+    <div class="hFooter"></div>
+</div>
+
+<div class="footer">
+	<div class="menu">
+		<div class="menu-bar">
+			<ul>
+				<li><%=link_to("Предметная съемка","/pages/predphoto?link=prph")%></li>
+				<li><%=link_to("Студийная съемка","/pages/studphoto?link=stph")%></li>
+				<li><%=link_to("Репортажная съемка","/pages/reportphoto?link=reph")%></li>
+				<li><%=link_to("Съемка интерьера","/pages/interphoto?link=intph")%></li>
+				<li><%=link_to("Портфолио","/pages/portfolio?link=prtf")%></li>
+				<li><%=link_to("Цены","/pages/price?link=price")%></li>
+				<li><%=link_to("Статьи","/pages/articles?link=arts")%></li>
+ 			</ul>
+		</div>
+	</div>
+	<div class="hline"></div>
+	<div class="f">© IKRA-STUDIO, 2012. Разработка сайта <a href="http://citrusdev.com.ua/"><b>CitrusDev</b></a></div>
+</div>
+
+</html>

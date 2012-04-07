@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Фото студия IKRA | <%= @title %> </title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "admins.css" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery-1.7.2.min.js" %>
+  <%= csrf_meta_tags %>
+  <%
+	MarkItUp.buttons = MarkItUp.default_buttons
+	MarkItUp.replace_button(14, { :name => 'Image', :icon => "image", :key => 'P', :replaceWith => '<img src="/path" alt="" />' })
+	MarkItUp.insert_button(17, { :separator => '---------------' })
+	MarkItUp.delete_button(3)
+	MarkItUp.delete_button("Bold")
+  %>
+  <%= mark_it_up '#miu_test' %>
+</head>
+<body>
+	<div class="line"></div>
+	<center>
+		
+		<% if session[:user_id]%>
+			
+			<%= yield %><br><br>
+			
+			<%= button_to 'Logout', logout_path, mehod: :delete %><br />
+			
+		<% end %>	
+		
+	</center>	
+	
+	<div class="line"></div>
+	<div class="footer">© IKRA-STUDIO, 2012. Разработка сайта <a href="http://citrusdev.com.ua/"><b>CitrusDev</b></a></div>
+
+</body>
+</html>

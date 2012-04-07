@@ -1,0 +1,14 @@
+// Place all the styles related to the Contents controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+		background: white;
+	}
+	
+	.line{
+		position: relative;
+		width: 1000px;
+		height: 15px;
+		background: #ff5205;
+		background-repeat: repeat-x;
+	}

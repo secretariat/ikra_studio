@@ -13,6 +13,9 @@ gem 'mark_it_up', :git => 'git://github.com/cingel/mark_it_up.git'
 
 gem 'sqlite3'
 
+group :production do
+  gem 'sqlite3', '1.3.5'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.

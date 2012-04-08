@@ -2,12 +2,16 @@ class PagesController < ApplicationController
   
   skip_before_filter :authorize
   
+  def main
+	redirect_to "/pages/index?link=main"
+  end
   
   def changelang_ru
 	
 	session[:lang] = "RU"
 	
 	redirect_to(request.env["HTTP_REFERER"])
+	
   end
   
   def changelang_en
@@ -15,13 +19,14 @@ class PagesController < ApplicationController
 	session[:lang] = "EN"
 	
 	redirect_to(request.env["HTTP_REFERER"])
+	
   end
   
   def index
     if( (session[:lang]) && (session[:lang] == "RU" ) )then
-		session[:lang] == "RU"
+		session[:lang] = "RU"
 	else
-		session[:lang] == "EN"	
+		session[:lang] = "EN"	
     end
     @title = "Main"
 	@pages = Content.where("link = ? and lang = ?", params[:link], session[:lang])

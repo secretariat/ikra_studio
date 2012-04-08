@@ -1,5 +1,7 @@
 Ikra::Application.routes.draw do
-   
+  
+  root :to => 'pages#main'
+  
   match "mark_it_up/preview" => "mark_it_up#preview"
 
   get "pages/index"

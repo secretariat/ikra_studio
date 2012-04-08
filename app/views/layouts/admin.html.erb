@@ -17,15 +17,15 @@
   <%= mark_it_up '#miu_test' %>
 </head>
 <body>
-	<center>
+	
 		
 		<% if session[:user_id]%>
 			<%= button_to 'Logout', logout_path, mehod: :delete %><br />
-			
+			<center>
 			<%= yield %><br><br>
-						
+			</center>			
 		<% end %>	
 		
-	</center>	
+		
 </body>
 </html>

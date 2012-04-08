@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
 
-  layout 'admin'
+  #layout 'admin'
   
   # GET /contents
   # GET /contents.json

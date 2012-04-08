@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-  layout 'admin'
+  #layout 'admin'
   
   # GET /users
   # GET /users.json

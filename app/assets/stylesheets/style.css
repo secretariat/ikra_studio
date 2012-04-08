@@ -34,27 +34,27 @@ height: 60px;
 position: relative;
 float:left;
 background: black; 
-min-height: 525px;
-width: 700px;
+min-height: 300px;
+width: 710px;
+/*border: 1px solid white;*/
 }
 
   #pane4 {
     height: 78%;
     overflow: auto;
-    width: 650px; 
+    width: 710px; 
     color: white;
   }
 
   #pane4 img {
-    margin: auto auto 15px 10px;
+    margin: auto auto 15px 25px;
   }
 
    #pane3 {
     height: 78%;
     overflow: auto;
-    width: 650px; 
+    width: 690px; 
     color: white;
-    background: black;
   }
     #pane3 img {
     margin: auto auto 5px 15px;
@@ -70,32 +70,41 @@ width: 700px;
 position: relative;
 float: right;
 background: black;
-width: 300px;
-min-height: 525px; 
+width: 280px;
+min-height: 280px;
+}
+
+.col2 img {
+  float: right;
+  position: relative;
+  z-index: 1;
 }
 
 * html .main { 
 height: 100%; 
 }
 .hFooter { 
-height: 55px;
+z-index: 999;
+height: 60px;
 }
-.footer { 
+.footer {
+  z-index: 999;
+position: relative;
 background: black;
 color: #fff;
-height: 55px;
+height: 60px;
 width: 1000px;
-margin: -55px auto auto auto;
+margin: -60px auto auto auto;
 }
 
 .menu {
-margin: auto auto auto 40px;
 position: relative;
+z-index: 999;
 width: 1000px;
-height: 20px;
+height: 30px;
 }
 
-.menu-bar {text-align: center;}
+.menu-bar {  z-index: 9999;text-align: center;}
   
 .menu-bar ul {
   color: #7b96b4;
@@ -106,7 +115,6 @@ height: 20px;
 
 .menu-bar li {
   display: inline;
-  float: left;
 }
 
 .menu-bar li a {
@@ -122,6 +130,7 @@ height: 20px;
 
 
 .hline{
+    z-index: 999;
   position: relative;
   width: 1000px;
   height: 15px;
@@ -130,15 +139,15 @@ height: 20px;
  }
 
 .f { 
-margin: auto;
+    z-index: 999;
+margin: auto 40px auto 40px;
 position: relative;
 background: black;
 width: 1000px;
-height: 20px;
+height: 15px;
 font-size: 8pt;
 font-family: "Verdana", "Arial", "Helvetica sans-serif";
 text-align: center;
-/*color: #ffffff;*/
 color: #434a4f;
 }
 

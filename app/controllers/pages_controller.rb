@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   skip_before_filter :authorize
   
   def main
+	session[:lang] = "RU"
 	redirect_to "/pages/index?link=main"
   end
   

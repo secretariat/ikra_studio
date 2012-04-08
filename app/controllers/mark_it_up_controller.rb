@@ -1,6 +1,6 @@
 class MarkItUpController < ApplicationController 
   
-  layout 'admin'
+  layout 'login'
   
   skip_before_filter :authorize
   

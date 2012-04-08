@@ -3,21 +3,17 @@
 <head>
   <title>Фото студия IKRA | <%= @title %> </title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag    "admins.css" %>
+  <%= stylesheet_link_tag    "contents.css" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
 </head>
 <body>
-	<div class="line"></div>
 	<center>
 		
 			<%= yield %><br><br>
 	
 	</center>	
-	
-
-	<div class="footer">© IKRA-STUDIO, 2012. Разработка сайта <a href="http://citrusdev.com.ua/"><b>CitrusDev</b></a></div>
 
 </body>
 </html>

@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   
   skip_before_filter :authorize
+  
+  
   def changelang_ru
 	
 	session[:lang] = "RU"

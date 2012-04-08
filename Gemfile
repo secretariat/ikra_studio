@@ -11,11 +11,14 @@ gem 'mark_it_up', :git => 'git://github.com/cingel/mark_it_up.git'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3', '1.3.5'
+end
 
 group :production do
   gem 'sqlite3', '1.3.5'
 end
+
 
 # Gems used only for assets and not required
 # in production environments by default.

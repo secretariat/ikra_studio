@@ -1,41 +1,50 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Фото студия IKRA | <%= @title %> </title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+	<title>Фото студия IKRA</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="/scripts/jquery.js"></script>
+	<script type="text/javascript" src="/scripts/jScrollPane.js"></script>
+	<script type="text/javascript" src="/scripts/jquery.mousewheel.js"></script>
+	
 
-  <script type="text/javascript">
+	<link rel="stylesheet" href="/styles/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" media="all" href="/styles/jScrollPane.css">
+	<%= csrf_meta_tags %>
+	<%
+		MarkItUp.buttons = MarkItUp.default_buttons
+		MarkItUp.replace_button(14, { :name => 'Image', :icon => "image", :key => 'P', :replaceWith => '<img src="/path" alt="" />' })
+		MarkItUp.insert_button(17, { :separator => '---------------' })
+		MarkItUp.delete_button(3)
+		MarkItUp.delete_button("Bold")
+	%>
+	<%= mark_it_up '#miu_test' %>
+
+	<script type="text/javascript">
 	$(function()
 			{
 				$('#pane4').jScrollPane();
 			});
-  </script>
-  <%= csrf_meta_tags %>
-  <%
-	MarkItUp.buttons = MarkItUp.default_buttons
-	MarkItUp.replace_button(14, { :name => 'Image', :icon => "image", :key => 'P', :replaceWith => '<img src="/path" alt="" />' })
-	MarkItUp.insert_button(17, { :separator => '---------------' })
-	MarkItUp.delete_button(3)
-	MarkItUp.delete_button("Bold")
-  %>
-  <%= mark_it_up '#miu_test' %>
+	</script>
 </head>
 <body>
 <div class="main">
     <div class="lang-bar">
     	<div class="lang-content">
-			<a href="http://ikra-studio.com.ua/pages/changelang_ru"><img src="/images/ru_.gif" alt="ru" border="0"></img></a>
-			<a href="http://ikra-studio.com.ua/pages/changelang_en"><img src="/images/en_.gif" alt="en" border="0"></img></a>
+			<a href="index.html"><img src="/images/ru_.gif" alt="ru" border="0"></img></a>
+			<a href="index.html"><img src="/images/en_.gif" alt="en" border="0"></img></a>
     	</div>
     </div>
-    <div class="header"><a href="http://ikra-studio.com.ua/"><img src="/images/logo.jpg" alt="IKRA" border="0"></img></a></div>
+    <div class="header"><a href="index.html"><img src="/images/logo.jpg" alt="IKRA" border="0"></img></a></div>
     <div class="left col1">
-		<%= yield %>
+    	
+			<%= yield %>
+		
     </div>
     <div class="col2"><img src="/images/me.jpg" alt="Фото студия IKRA" border="0"></img></div>
     <div class="hFooter"></div>
 </div>
+
 <div class="footer">
 	<div class="menu">
 		<div class="menu-bar">
@@ -54,5 +63,6 @@
 	<div class="hline"></div>
 	<div class="f">© IKRA-STUDIO, 2012. Разработка сайта <a href="http://citrusdev.com.ua/"><b>CitrusDev</b></a></div>
 </div>
+
 </body>
 </html>

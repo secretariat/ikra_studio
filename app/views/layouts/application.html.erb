@@ -52,18 +52,34 @@
     <div class="col2"><img src="/images/me.jpg" alt="Фото студия IKRA" border="0"></img></div>
     <div class="hFooter"></div>
 </div>
-
+<%if (session[:lang] == "RU") then %>
+	<% @pred = "Предметная съемка" %>
+	<% @styd = "Студийная съемка"%>
+        <% @rep = "Репортажная съемка"%>
+	<% @inter = "Съемка интерьера"%>
+        <% @port = "Портфолио"%>
+	<% @price = "Цены"%>
+        <% @art = "Статьи"%>
+<%else%>
+	<% @pred = "Shooting subjects" %>
+        <% @styd = "Shooting in studio"%>
+	<% @rep = "Reportage photography"%>
+        <% @inter = "Interiours photography"%>
+	<% @port = "Portfolio"%>
+        <% @price = "Prices"%>
+	<% @art = "Photo articles"%>
+<% end %>
 <div class="footer">
 	<div class="menu">
 		<div class="menu-bar">
 			<ul>
-				<li><%=link_to("Предметная съемка","/pages/predphoto?link=prph")%></li>
-				<li><%=link_to("Студийная съемка","/pages/studphoto?link=stph")%></li>
-				<li><%=link_to("Репортажная съемка","/pages/reportphoto?link=reph")%></li>
-				<li><%=link_to("Съемка интерьера","/pages/interphoto?link=intph")%></li>
-				<li><%=link_to("Портфолио","/pages/portfolio?link=prtf")%></li>
-				<li><%=link_to("Цены","/pages/price?link=price")%></li>
-				<li><%=link_to("Статьи","/pages/articles?link=arts")%></li>
+			    <li><%=link_to( @pred,"/pages/predphoto?link=prph")%></li>
+			    <li><%=link_to( @styd,"/pages/studphoto?link=stph")%></li>
+			    <li><%=link_to( @rep,"/pages/reportphoto?link=reph")%></li>
+			    <li><%=link_to( @inter,"/pages/interphoto?link=intph")%></li>
+			    <li><%=link_to( @port,"/pages/portfolio?link=prtf")%></li>
+			    <li><%=link_to( @price,"/pages/price?link=price")%></li>
+			    <li><%=link_to( @art,"/pages/articles?link=arts")%></li>
  			</ul>
 		</div>
 	</div>

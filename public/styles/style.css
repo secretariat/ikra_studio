@@ -33,7 +33,7 @@ height: 60px;
 .col1 { 
 position: relative;
 float:left;
-background: black; 
+background: red; 
 min-height: 500px;
 height: 500px;
 /*height: auto;*/

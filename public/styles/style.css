@@ -34,7 +34,8 @@ height: 60px;
 position: relative;
 float:left;
 background: black; 
-min-height: 500px;
+/*min-height: 500px;*/
+height: auto;
 width: 710px;
 }
 
@@ -50,7 +51,7 @@ width: 710px;
   }
 
    #pane3 {
-    height: 78%;
+    height: auto;
     overflow: auto;
     width: 700px; 
     color: white;

@@ -34,7 +34,7 @@ height: 60px;
 position: relative;
 float:left;
 background: black; 
-/*min-height: 500px;*/
+min-height: 500px;
 height: auto;
 width: 710px;
 }
